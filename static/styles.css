@@ -1,0 +1,90 @@
+/* Estilos para el contenedor del chat */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f2937; /* Color de fondo oscuro */
+    color: rgb(255, 255, 255); /* Color de texto morado */
+    margin: 0;
+    padding: 0;
+    max-width: none;
+}
+
+/* Estilos para el cuadro del chat */
+.box {
+    width: 100%; /* Cambiado a 100% */
+    max-width: 100%; /* Cambiado a 100% */
+    height: calc(100vh - 85px); /* Ajuste del alto con 100vh */
+    margin-top: 85px;
+}
+
+/* Estilos para la parte superior del chat */
+.upper {
+    max-height: calc(100% - 220px);
+    padding-top: 40px;
+    padding-bottom: 170px;
+    overflow: auto;
+}
+
+/* Ocultar la barra de desplazamiento en la parte superior del chat */
+.upper::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+/* Estilos para la parte inferior del chat */
+.bottom {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 5%;
+    background-color: #1f2937; /* Color de fondo oscuro */
+    width: 95%;
+    max-width: 800px;
+}
+
+/* Estilos para los mensajes del chat */
+.message {
+    margin: 20px;
+}
+
+/* Estilos para los mensajes del usuario */
+.usermessagediv {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-left: 20%;
+}
+
+/* Estilos para el globo de diálogo del usuario */
+.usermessage {
+    background-color: #4a5568; /* Gris azulado oscuro */
+    color: rgb(255, 255, 255); /* Color de texto morado */
+    padding: 0.5rem .875rem;
+    border-radius: 20px;
+}
+
+/* Estilos para los mensajes de la aplicación */
+.appmessagediv {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-right: 20%;
+}
+
+/* Estilos para el globo de diálogo de la aplicación */
+.appmessage {
+    background-color: #2d3748; /* Gris oscuro */
+    color: rgb(255, 255, 255); /* Color de texto morado */
+    padding: 0.5rem .875rem;
+    border-radius: 20px;
+}
+
+/* Estilos para los mensajes de advertencia */
+.downwarning {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    font-size: 90%;
+    color: #cbd5e0; /* Gris claro */
+}
+
+
