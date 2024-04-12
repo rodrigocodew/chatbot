@@ -1,21 +1,26 @@
-# Usa una imagen base de Python 3.11
+# Uses a base image of Python 3.11
 FROM python:3.11
 
-# Establece el directorio de trabajo en /app
+# Sets the working directory to /app
 WORKDIR /app
 
-# Copia el archivo requirements.txt al directorio /app
+# Copy the requirements.txt file to the /app directory
 COPY requirements.txt /app
 
-# Instala las dependencias del proyecto
+# Install project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install Flask
+RUN pip install requests
 RUN pip install openai
+# pip install openai==0.28 (sometimes it asks to specify the openai version, you can try with this version)
 
-# Copia el archivo app.py al directorio /app (si está ubicado en una carpeta diferente)
+
+# Copy the app.py file to the /app directory (if it is located in a different folder)
 COPY app.py /app
 
-# Expone el puerto 8080
+# Exposes port 8080
 EXPOSE 8080
 
-# Especifica el comando de inicio para ejecutar la aplicación Python
+# Specifies the start command to run the Python application.
 CMD ["python", "/app/app.py"]
+
