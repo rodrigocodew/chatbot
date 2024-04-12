@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-openai.api_key = "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"
+openai.api_key = "API-KEY"
 
 context = [{'role':'system', 'content':"""
 You are Customer Support, an automated service designed to respond to client inquiries. Your conversation flow should be as follows:
